@@ -1,0 +1,36 @@
+<form action="userSession/logout" method="POST">
+    <button type="submit">Logout</button>
+</form>
+
+<form action="shoppingList" method="POST">
+    <label>Name of item</label>
+    <input type="text" name="name" />
+
+    <br>
+    <label>Quantity of item</label>
+    <input type="number" name="quantity" />
+
+    <br>
+    <button type="submit">Add item</button>
+</form>
+
+
+<!--<div th:each="item: ${items}">
+    <p th:text="${item.name}" />
+</div> -->
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="item: ${items}">
+            <td th:text="${item.name}" />
+            <td th:text="${item.quantity}" />
+        </tr>
+    </tbody>
+</table>
